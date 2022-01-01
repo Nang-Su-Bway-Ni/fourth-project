@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --gray: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  background-color: var(--gray);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+main {
+  min-height: 100vh;
+  padding-top: 10%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 55%;
+  margin: auto;
+}
+.grid-item {
+  padding: 30px;
+  text-align: center;
+  color: var(--gray);
+  text-align: left;
+}
+.grid-item h1 {
+  padding: 20px 0;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.grid-item p {
+  font-size: 15px;
+  color: var(--paragraphs);
+  padding-bottom: 20px;
+}
+.grid-item button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  background-color: var(--gray);
+  margin-top: 50px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s ease-in;
+}
+.grid-item button:hover {
+  background-color: transparent;
+  border: 2px solid var(--gray);
+  color: var(--gray);
+}
+.orange {
+  background-color: var(--orange);
+  border-radius: 5px 0 0 5px;
+}
+.cyan {
+  background-color: var(--cyan);
+}
+.dark-cyan {
+  background-color: var(--dark-cyan);
+  border-radius: 0 5px 5px 0;
+}
+.orange .btn1 {
+  color: var(--orange);
+}
+
+.cyan .btn2 {
+  color: var(--cyan);
+}
+.dark-cyan .btn3 {
+  color: var(--dark-cyan);
+}
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  .orange {
+    background-color: var(--orange);
+    border-radius: 5px 5px 0 0;
+  }
+  .dark-cyan {
+    border-radius: 0 0 5px 5px;
+  }
+  .grid-item button {
+    margin-top: 10px;
+  }
+}
